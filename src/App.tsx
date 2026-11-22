@@ -8,12 +8,10 @@ import { Hero } from './components/Hero'
 import { Nav } from './components/Nav'
 import { RealmsFolder } from './components/RealmsFolder'
 import { Reviews } from './components/Reviews'
-import { useLenisGsap } from './hooks/useLenisGsap'
 
 const sectionIds = ['overview', 'realms', 'gallery', 'scope', 'reviews', 'faq', 'devlog'] as const
 
 export default function App() {
-  useLenisGsap()
   const [activeId, setActiveId] = useState<string>('overview')
 
   useEffect(() => {

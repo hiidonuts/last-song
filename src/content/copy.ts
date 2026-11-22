@@ -67,7 +67,7 @@ export const realms: Realm[] = [
     tags: ['Desert dunes', 'Exploration'],
     panel: 'preview',
     image: '/game/realm2/4.png',
-    colorVar: '--color-folder-02',
+    colorVar: '--color-deep',
     ink: 'light',
   },
   {

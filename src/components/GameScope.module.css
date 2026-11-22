@@ -1,15 +1,33 @@
 /* Hallmark · component: GameScope */
 .section {
   position: relative;
-  min-height: 100svh;
+  height: 200svh;
+  margin-bottom: -100svh;
+  color: #fff;
+}
+
+.sectionStill {
+  position: relative;
+  height: 100svh;
+  color: #fff;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
   display: flex;
   align-items: flex-end;
-  overflow: hidden;
+  background: var(--color-deep);
 }
 
 .bg {
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  top: -10%;
+  height: 120%;
 }
 
 .bg img {

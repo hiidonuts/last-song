@@ -1,11 +1,16 @@
 /* Hallmark · component: RealmsFolder */
 .section {
-  padding: var(--section-gap) var(--gutter) 4rem;
+  position: relative;
+  overflow-x: clip;
+  padding: var(--section-gap) 0;
+}
+
+.wrap {
+  width: min(76rem, calc(100% - 3rem));
+  margin: 0 auto;
 }
 
 .intro {
-  width: min(1240px, 100%);
-  margin: 0 auto 3.5rem;
   text-align: center;
 }
 
@@ -18,71 +23,111 @@
 .introBlurb {
   display: inline-block;
   max-width: 36rem;
-  padding: 0.7rem 1rem;
-  background: color-mix(in oklab, var(--color-paper-3) 80%, transparent);
+  padding: 0.75rem 1rem;
+  background: var(--color-paper-3);
   font-size: var(--text-md);
+  line-height: 1.4;
 }
 
 .stack {
   list-style: none;
-  margin: 0 auto;
+  margin: clamp(2.5rem, 5vw, 4.5rem) 0 0;
   padding: 0;
-  width: min(1240px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 12svh;
 }
 
 .item {
   position: sticky;
-  top: calc(var(--nav-h) + 1.25rem);
-  margin-bottom: 18vh;
+  perspective: 1600px;
 }
 
 .card {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  min-height: min(44rem, calc(100svh - 8rem));
-  padding: 1rem;
-}
-
-.cardDark { color: var(--color-folder-ink); }
-.cardLight { color: var(--color-ink); }
-
-.copy {
+  position: relative;
   display: flex;
+  width: 100%;
+  transform-origin: top center;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem 1rem 1rem;
-  min-width: 0;
+  will-change: transform;
 }
 
-.meta {
+.tab {
+  position: relative;
   display: flex;
-  gap: 1.25rem;
+  align-items: center;
+  height: 2.75rem;
+  width: fit-content;
+  margin-bottom: -1px;
+  padding: 0 3.75rem 0 1.25rem;
+  clip-path: polygon(0 0, calc(100% - 2.75rem) 0, 100% 100%, 0 100%);
   font-family: var(--font-label);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
+.tab0 { margin-left: 0; }
+.tab1 { margin-left: 18%; }
+.tab2 { margin-left: 44%; }
+.tab3 { margin-left: auto; margin-right: 5%; }
+
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: min(44rem, calc(100svh - clamp(4.5rem, 10svh, 7rem) - 8rem));
+  max-height: 48rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.inkDark { color: var(--color-folder-ink); }
+.inkLight { color: var(--color-ink); }
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+  padding: 2rem 1rem 1rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: currentColor;
+}
+
 .title {
+  margin: 0;
   font-family: var(--font-body);
   font-size: var(--text-title);
   font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1.05;
-  margin: 0;
 }
 
 .bodyText {
-  max-width: 34ch;
+  max-width: 26rem;
   font-size: var(--text-md);
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 .more {
-  margin-top: auto;
   font-family: var(--font-label);
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
@@ -91,26 +136,27 @@
 
 .tags {
   display: flex;
-  gap: 0.4rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
 }
 
 .tag {
   padding: 0.35rem 0.55rem;
-  background: var(--color-folder-ink);
+  background: var(--color-deep);
   color: var(--color-ink);
   font-family: var(--font-label);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .panel {
   position: relative;
-  min-height: 280px;
   min-width: 0;
-  border: 1.5px solid color-mix(in oklab, currentColor 45%, transparent);
+  min-height: 16rem;
   overflow: hidden;
-  background: var(--color-deep);
+  border: 1.5px solid color-mix(in srgb, currentColor 40%, transparent);
 }
 
 .preview {
@@ -123,11 +169,11 @@
 
 .previewTag {
   position: absolute;
-  top: 0.6rem;
-  right: 0.6rem;
+  top: 1rem;
+  right: 1rem;
   z-index: 2;
-  padding: 0.3rem 0.5rem;
-  background: color-mix(in oklab, var(--color-deep) 75%, transparent);
+  padding: 0.35rem 0.55rem;
+  background: color-mix(in srgb, var(--color-deep) 80%, transparent);
   color: var(--color-ink);
   font-family: var(--font-label);
   font-size: 0.7rem;
@@ -139,8 +185,8 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
-  padding: 1.25rem;
   height: 100%;
+  padding: 1.25rem;
   align-content: center;
   background: var(--color-inventory-bg);
 }
@@ -149,12 +195,22 @@
   width: 100%;
   aspect-ratio: 1;
   object-fit: contain;
-  background: color-mix(in oklab, var(--color-ink) 8%, transparent);
-  padding: 0.6rem;
-  box-shadow: 8px 8px 0 rgb(0 0 0 / 35%);
+  padding: 0.5rem;
+  background: color-mix(in srgb, var(--color-ink) 8%, transparent);
 }
 
-@media (max-width: 60rem) {
-  .card { grid-template-columns: 1fr; min-height: 0; }
-  .item { position: relative; top: auto; margin-bottom: 1.5rem; }
+.shade {
+  position: absolute;
+  inset: 0;
+  background: black;
+  pointer-events: none;
+}
+
+@media (max-width: 64rem) {
+  .body {
+    grid-template-columns: 1fr;
+    max-height: none;
+  }
+  .tab1, .tab2, .tab3 { margin-left: 0; margin-right: 0; }
+  .item { position: relative; top: auto !important; }
 }
