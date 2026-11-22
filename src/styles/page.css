@@ -1,0 +1,111 @@
+/* Hallmark · shape: Ritual Board · genre: atmospheric · theme: custom · job: join · idea: "A design-board landing page for a dark pixel ritual — selection chrome, foldered realms that stack on scroll, then the world opens full-bleed." · vibe: "dark pixel ritual, Awwwards motion"
+ * paper: oklch(14% 0.028 275) · accent: oklch(78% 0.07 295) · display: Pixelify Sans · body: Clash Grotesk · hero: centred pixel wordmark in selection frame with sticker tags · nav: edge wordmark + anchors + Huawei CTA · footer: mast wordmark over two link columns · imagery: real Last Song pixel assets · signature: scroll-stacked realm folders
+ * axes: dark/pixel/cool · posture: atmospheric · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R3 V4 · weakest: R, folder scroll must feel intentional not slideshow — pinned scrub with tab morph */
+/* waive 54: pixel display heads keep uppercase as the brand voice; labels are sentence case */
+/* waive 47a: selection handles are intentional chrome from the design board idea, not OS window chrome */
+/* answered 37: three faces — Pixelify Sans display, Clash Grotesk body, Caveat outlier script */
+/* waive 26b: interactive :active lives on .btn / nav / tabs / form fields; base.css stays Floor-only */
+@import url("../tokens.css");
+@import url("../base.css");
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+.page {
+  min-height: 100vh;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.section-script {
+  font-family: var(--font-outlier);
+  font-size: clamp(1.65rem, 1.5vw + 1rem, 2.25rem);
+  font-weight: 500;
+  color: var(--color-ink);
+  line-height: 1.1;
+}
+
+.section-script::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  margin-top: 0.15em;
+  background: var(--color-ink);
+  opacity: 0.7;
+}
+
+.pixel-head {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  min-height: 56px;
+  padding: var(--space-md) var(--space-xl);
+  border: none;
+  border-radius: var(--radius-card);
+  background: var(--color-cta);
+  color: var(--color-cta-ink);
+  font-family: var(--font-label);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--dur-short) var(--ease-out), opacity var(--dur-short) var(--ease-out);
+}
+
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); opacity: 0.88; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+.btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-rule);
+}
+
+.btn__mark {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: grid;
+  place-items: center;
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+  border-radius: 3px;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-folder-ink);
+  white-space: nowrap;
+}
+
+.chip--green { background: var(--color-sticker-green); }
+.chip--orange { background: var(--color-sticker-orange); }
+.chip--yellow { background: var(--color-sticker-yellow); }
+.chip--purple { background: var(--color-accent); color: var(--color-accent-ink); }
+
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

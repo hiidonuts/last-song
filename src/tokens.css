@@ -1,0 +1,58 @@
+/* Hallmark · tokens · matched to the Webild Last Song preview */
+:root {
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --text-xs: 0.875rem; --text-sm: 0.9375rem; --text-md: 1.0625rem; --text-lg: 1.25rem; --text-xl: 1.5rem; --text-2xl: 2rem; --text-3xl: 2.5rem;
+  --text-display: clamp(3.5rem, 1.6rem + 7.8vw, 9.375rem);
+  --text-h1: clamp(2.75rem, 1.6rem + 4.7vw, 6.25rem);
+  --text-section: clamp(2.5rem, 1.4rem + 4vw, 6.25rem);
+  --text-title: clamp(1.75rem, 1.2rem + 2vw, 4.25rem);
+  --text-lead: clamp(1.0625rem, 0.98rem + 0.3vw, 1.25rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
+  --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
+  --container: 1240px; --gutter: clamp(1.25rem, 4vw, 4rem); --gap-columns: 0px;
+  --section-gap-s: clamp(4.5rem, 3.3rem + 4.9vw, 8.125rem);
+  --section-gap: var(--section-gap-s);
+  --section-gap-l: var(--section-gap-s);
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+
+  --color-paper: #141225;
+  --color-paper-2: #1f1c33;
+  --color-paper-3: #2b2546;
+  --color-ink: #f2f0fb;
+  --color-ink-2: #f2f0fb;
+  --color-muted: #aaa5c4;
+  --color-rule: #2e2a47;
+  --color-accent: #b9a6ff;
+  --color-accent-ink: #17142b;
+  --color-focus: #f2f0fb;
+  --color-deep: #0b0a17;
+
+  --color-folder-01: #b9a6ff;
+  --color-folder-02: #2b2546;
+  --color-folder-03: #ffd84d;
+  --color-folder-04: #ff8a66;
+  --color-sticker-green: #7be0b5;
+  --color-sticker-orange: #ff8a66;
+  --color-sticker-yellow: #ffd84d;
+  --color-cta: #f2f0fb;
+  --color-cta-ink: #141225;
+  --color-folder-ink: #17142b;
+  --color-inventory-bg: #141225;
+  --color-portrait-1: #6d7894;
+  --color-portrait-2: #b9a6ff;
+  --color-portrait-3: #8ec8e8;
+  --color-portrait-4: #c9a6e0;
+
+  --font-display: "Pixelify Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-outlier: "Just Me Again Down Here", "Comic Sans MS", cursive;
+  --font-label: "DM Mono", ui-monospace, Menlo, monospace;
+
+  --radius-card: 0px;
+  --radius-pill: 999px;
+  --rule-hair: 1px;
+  --shadow-card: none;
+  --tracking-display: 0em;
+  --nav-h: 48px;
+}
