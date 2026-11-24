@@ -15,7 +15,6 @@ export const navLinks = [
   { id: 'overview', label: 'Overview' },
   { id: 'realms', label: 'Realms' },
   { id: 'faq', label: 'FAQ' },
-  { id: 'reviews', label: 'Reviews' },
 ] as const
 
 export const heroTags = [
@@ -145,38 +144,6 @@ export const scope = {
   ],
 }
 
-export const reviews = {
-  script: 'Playtest feedback',
-  title: 'Reactions from the dark',
-  items: [
-    {
-      name: 'Ethan Brooks',
-      role: 'Speedrunner',
-      quote: 'The platforming feels extremely tight and responsive. Every jump is deliberate.',
-    },
-    {
-      name: 'Molly Murphy',
-      role: 'Beta tester',
-      quote: 'Managing torch fuel while dodging wall traps makes every room feel tense.',
-    },
-    {
-      name: 'Luke Ramirez',
-      role: 'Indie game streamer',
-      quote: 'Classic platforming, with light mechanics that give it a modern edge.',
-    },
-    {
-      name: 'Grace Kelly',
-      role: 'Playtester',
-      quote: 'The pixel animation on the boss encounters is insanely detailed.',
-    },
-    {
-      name: 'Nathan Shaw',
-      role: 'Game reviewer',
-      quote: 'A masterclass in tension, pixel art, and environmental sound.',
-    },
-  ],
-}
-
 export const faq = {
   title: 'Before you descend',
   image: '/game/scope/credits.png',
@@ -186,24 +153,8 @@ export const faq = {
       a: 'Last Song is a dark 2D pixel art platformer centered on exploration and torch fuel.',
     },
     {
-      q: 'Is the game difficult?',
-      a: 'It is a firm but fair platforming challenge that rewards precision and planning.',
-    },
-    {
-      q: 'Does Last Song support gamepads?',
-      a: 'Controller support and keyboard bindings are planned from the first release.',
-    },
-    {
       q: 'Where will it release?',
       a: 'First on Huawei GameCenter, with PC to follow.',
-    },
-    {
-      q: 'How long is a complete playthrough?',
-      a: 'A full run is built for persistent explorers who hunt every hidden room.',
-    },
-    {
-      q: 'Will there be a playable demo?',
-      a: 'A demo is planned once the GameCenter page is live.',
     },
   ],
 }
@@ -226,7 +177,6 @@ export const footer = {
     { label: 'Overview', href: '#overview' },
     { label: 'Realms', href: '#realms' },
     { label: 'FAQ', href: '#faq' },
-    { label: 'Reviews', href: '#reviews' },
   ],
   community: [
     { label: 'Huawei GameCenter', href: HUAWEI_URL },
