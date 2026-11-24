@@ -3,6 +3,7 @@
   position: relative;
   overflow-x: clip;
   padding: var(--section-gap) 0;
+  background: var(--color-paper);
 }
 
 .wrap {

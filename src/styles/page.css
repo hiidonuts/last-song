@@ -76,16 +76,11 @@ html.lenis, html.lenis body { height: auto; }
   border: 1px solid var(--color-rule);
 }
 
-.btn__mark {
-  width: 1.35rem;
-  height: 1.35rem;
-  display: grid;
-  place-items: center;
-  background: var(--color-accent);
-  color: var(--color-accent-ink);
-  border-radius: 3px;
-  font-size: 0.7rem;
-  line-height: 1;
+.btn__android {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+  color: var(--color-accent);
 }
 
 .chip {

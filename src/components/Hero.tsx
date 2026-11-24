@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { HUAWEI_URL, heroSprites, site } from '../content/copy'
-import { useClock } from '../hooks/useClock'
+import { AndroidIcon } from './AndroidIcon'
+import { APK_URL, heroSprites, site } from '../content/copy'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import styles from './Hero.module.css'
 
@@ -19,7 +19,6 @@ const drift = [
 ]
 
 export function Hero() {
-  const time = useClock()
   const reduced = useReducedMotion()
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({
@@ -38,8 +37,6 @@ export function Hero() {
     >
       <div className={styles.sticky}>
         <motion.div className={styles.stage} style={{ scale }}>
-          <p className={styles.clock}>{time}</p>
-
           {drift.map((item, i) => (
             <motion.div
               key={item.place}
@@ -76,15 +73,6 @@ export function Hero() {
           </motion.p>
 
           <div className={styles.center}>
-            <motion.p
-              className={styles.script}
-              initial={reduced ? false : { clipPath: 'inset(0 100% 0 0)' }}
-              animate={{ clipPath: 'inset(0 0% 0 0)' }}
-              transition={{ duration: 0.6, delay: 1.8, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {site.scriptLabel}
-            </motion.p>
-
             <div className={styles.titleWrap}>
               <p className={`${styles.note} ${styles.noteLeft}`}>Huawei GameCenter</p>
               <p className={`${styles.note} ${styles.noteRight}`}>Coming soon to PC</p>
@@ -109,8 +97,8 @@ export function Hero() {
 
             <p className={styles.soon}>{site.soon}</p>
             <p className={styles.tagline}>{site.tagline}</p>
-            <a className="btn" href={HUAWEI_URL}>
-              <span className="btn__mark" aria-hidden="true">≫</span>
+            <a className="btn" href={APK_URL} download="Last_Song.apk">
+              <AndroidIcon />
               {site.ctaPrimary}
             </a>
           </div>

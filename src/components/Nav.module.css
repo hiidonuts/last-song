@@ -57,6 +57,7 @@
 .cta {
   display: none;
   align-items: center;
+  gap: 0.45rem;
   margin: 0.5rem 0.5rem 0.5rem auto;
   height: 2rem;
   padding: 0 0.9rem;

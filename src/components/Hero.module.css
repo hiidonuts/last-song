@@ -1,8 +1,8 @@
 /* Hallmark · component: Hero */
 .hero {
   position: relative;
+  z-index: 1;
   height: 200svh;
-  margin-bottom: -100svh;
 }
 
 .heroStill {
@@ -13,6 +13,7 @@
 .sticky {
   position: sticky;
   top: 0;
+  z-index: 1;
   height: 100svh;
   overflow: hidden;
 }

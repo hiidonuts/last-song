@@ -1,12 +1,13 @@
 export const HUAWEI_URL =
   (import.meta.env.VITE_HUAWEI_URL as string | undefined) || '#huawei-gamecenter'
 
+export const APK_URL = '/Last_Song.apk'
+
 export const site = {
   name: 'Last Song',
   tagline: 'Navigate shadows and survive the silence in a dark 2D pixel platformer.',
-  scriptLabel: 'explore dark',
-  ctaPrimary: 'Wishlist',
-  ctaNav: 'Wishlist now',
+  ctaPrimary: 'Download for Android',
+  ctaNav: 'Download for Android',
   soon: 'Available soon on Huawei GameCenter',
 }
 

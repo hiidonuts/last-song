@@ -1,6 +1,8 @@
 import { useRef, useState } from 'react'
 import { animate, motion, useMotionValue, useMotionValueEvent, useScroll } from 'framer-motion'
-import { HUAWEI_URL, navLinks, site } from '../content/copy'
+import { AndroidIcon } from './AndroidIcon'
+import { APK_URL, navLinks, site } from '../content/copy'
+import { scrollToSection } from '../hooks/useLenisGsap'
 import styles from './Nav.module.css'
 
 type Props = { activeId?: string }
@@ -42,7 +44,15 @@ export function Nav({ activeId = 'overview' }: Props) {
       </div>
       <motion.header className={styles.nav} style={{ y }}>
         <div className={styles.inner}>
-          <a className={styles.wordmark} href="#overview">
+          <a
+            className={styles.wordmark}
+            href="#overview"
+            onClick={(event) => {
+              event.preventDefault()
+              setOpen(false)
+              scrollToSection('overview')
+            }}
+          >
             {site.name}
           </a>
           <button
@@ -60,14 +70,19 @@ export function Nav({ activeId = 'overview' }: Props) {
                 <a
                   href={`#${link.id}`}
                   aria-current={activeId === link.id ? 'true' : undefined}
-                  onClick={() => setOpen(false)}
+                  onClick={(event) => {
+                    event.preventDefault()
+                    setOpen(false)
+                    scrollToSection(link.id)
+                  }}
                 >
                   {link.label}
                 </a>
               </li>
             ))}
           </ul>
-          <a className={styles.cta} href={HUAWEI_URL}>
+          <a className={styles.cta} href={APK_URL} download="Last_Song.apk">
+            <AndroidIcon />
             {site.ctaNav}
           </a>
         </div>
