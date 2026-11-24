@@ -7,6 +7,10 @@ export function Faq() {
 
   return (
     <section id="faq" className={styles.section} aria-labelledby="faq-title">
+      <div className={styles.bg} aria-hidden="true">
+        <img className="pixel-art" src={faq.image} alt="" />
+        <div className={styles.veil} />
+      </div>
       <div className={styles.wrap}>
         <h2 id="faq-title" className={`pixel-head ${styles.title}`}>
           {faq.title}

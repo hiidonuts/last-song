@@ -1,6 +1,33 @@
 /* Hallmark · component: Faq */
-.section { padding: var(--section-gap) var(--gutter); }
-.wrap { width: min(920px, 100%); margin: 0 auto; }
+.section {
+  position: relative;
+  padding: var(--section-gap) var(--gutter);
+  overflow: hidden;
+  isolation: isolate;
+}
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgb(11 10 23 / 62%) 0%, rgb(11 10 23 / 78%) 100%);
+}
+.wrap {
+  position: relative;
+  z-index: 1;
+  width: min(920px, 100%);
+  margin: 0 auto;
+}
 .title {
   font-size: var(--text-section);
   line-height: 0.92;

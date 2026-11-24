@@ -179,6 +179,7 @@ export const reviews = {
 
 export const faq = {
   title: 'Before you descend',
+  image: '/game/scope/credits.png',
   items: [
     {
       q: 'What is Last Song?',
