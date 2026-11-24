@@ -1,16 +1,13 @@
 import { useEffect, useState } from 'react'
-import { Devlog } from './components/Devlog'
 import { Faq } from './components/Faq'
-import { Features } from './components/Features'
 import { Footer } from './components/Footer'
-import { GameScope } from './components/GameScope'
 import { Hero } from './components/Hero'
 import { Nav } from './components/Nav'
 import { RealmsFolder } from './components/RealmsFolder'
 import { Reviews } from './components/Reviews'
 import { useLenisGsap } from './hooks/useLenisGsap'
 
-const sectionIds = ['overview', 'realms', 'gallery', 'scope', 'reviews', 'faq', 'devlog'] as const
+const sectionIds = ['overview', 'realms', 'faq', 'reviews'] as const
 
 export default function App() {
   useLenisGsap()
@@ -41,11 +38,8 @@ export default function App() {
       <main>
         <Hero />
         <RealmsFolder />
-        <Features />
-        <GameScope />
-        <Reviews />
         <Faq />
-        <Devlog />
+        <Reviews />
       </main>
       <Footer />
     </div>

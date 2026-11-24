@@ -50,7 +50,7 @@ function RealmCard({
             </div>
             <h3 className={styles.title}>{world.title}</h3>
             <p className={styles.bodyText}>{world.body}</p>
-            <a className={styles.more} href="#gallery">
+            <a className={styles.more} href="#faq">
               Learn more
             </a>
             <div className={styles.tags}>

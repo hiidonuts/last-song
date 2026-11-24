@@ -13,11 +13,9 @@ export const site = {
 
 export const navLinks = [
   { id: 'overview', label: 'Overview' },
-  { id: 'realms', label: 'Features' },
-  { id: 'gallery', label: 'Gallery' },
-  { id: 'scope', label: 'Stats' },
-  { id: 'reviews', label: 'Reviews' },
+  { id: 'realms', label: 'Realms' },
   { id: 'faq', label: 'FAQ' },
+  { id: 'reviews', label: 'Reviews' },
 ] as const
 
 export const heroTags = [
@@ -226,14 +224,11 @@ export const footer = {
   navigation: [
     { label: 'Overview', href: '#overview' },
     { label: 'Realms', href: '#realms' },
-    { label: 'Gameplay', href: '#gallery' },
-    { label: 'Game scope', href: '#scope' },
-    { label: 'Reviews', href: '#reviews' },
     { label: 'FAQ', href: '#faq' },
+    { label: 'Reviews', href: '#reviews' },
   ],
   community: [
     { label: 'Huawei GameCenter', href: HUAWEI_URL },
-    { label: 'Devlog updates', href: '#devlog' },
   ],
   rights: '©2026 Last Song. All rights reserved.',
   backTop: 'Back to top',
