@@ -19,6 +19,7 @@
 
 .wordmark {
   display: inline-block;
+  max-width: 100%;
   padding: var(--space-sm) var(--space-md);
   border: 1.5px solid var(--color-accent);
   font-family: var(--font-display);

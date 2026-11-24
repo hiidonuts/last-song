@@ -83,7 +83,7 @@ export function Nav({ activeId = 'overview' }: Props) {
           </ul>
           <a className={styles.cta} href={APK_URL} download="Last_Song.apk">
             <AndroidIcon />
-            {site.ctaNav}
+            <span className={styles.ctaLabel}>{site.ctaNav}</span>
           </a>
         </div>
       </motion.header>

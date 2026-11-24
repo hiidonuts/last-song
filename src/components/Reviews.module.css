@@ -35,7 +35,9 @@
 }
 @media (max-width: 70rem) {
   .row { grid-template-columns: 1fr 1fr; }
+  .card { min-height: 0; }
 }
 @media (max-width: 40rem) {
   .row { grid-template-columns: 1fr; }
+  .title { font-size: clamp(1.8rem, 10vw, 2.6rem); }
 }

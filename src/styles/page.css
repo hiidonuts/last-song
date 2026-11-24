@@ -70,6 +70,14 @@ html.lenis, html.lenis body { height: auto; }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
 .btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
 
+@media (max-width: 40rem) {
+  .btn {
+    max-width: 100%;
+    padding-inline: var(--space-md);
+    text-align: center;
+  }
+}
+
 .btn--ghost {
   background: transparent;
   color: var(--color-ink);

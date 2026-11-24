@@ -208,10 +208,21 @@
 }
 
 @media (max-width: 64rem) {
+  .wrap { width: min(100% - 2rem, 76rem); }
   .body {
     grid-template-columns: 1fr;
+    min-height: 0;
     max-height: none;
   }
+  .copy { padding: 1.25rem 0.5rem 0.5rem; }
+  .stack { gap: 2.5rem; }
   .tab1, .tab2, .tab3 { margin-left: 0; margin-right: 0; }
   .item { position: relative; top: auto !important; }
+  .panel { min-height: 14rem; }
+}
+
+@media (max-width: 40rem) {
+  .introTitle { font-size: clamp(1.8rem, 10vw, 2.6rem); }
+  .title { font-size: clamp(1.6rem, 8vw, 2.2rem); }
+  .tab { max-width: 100%; }
 }
