@@ -44,10 +44,6 @@ function RealmCard({
           style={{ background: `var(${world.colorVar})` }}
         >
           <div className={styles.copy}>
-            <div className={styles.meta}>
-              <span className={styles.dot} />
-              <span>{world.chapter}</span>
-            </div>
             <h3 className={styles.title}>{world.title}</h3>
             <p className={styles.bodyText}>{world.body}</p>
             <a className={styles.more} href="#faq">

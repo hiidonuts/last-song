@@ -1,10 +1,7 @@
 import { footer, site } from '../content/copy'
-import { useClock } from '../hooks/useClock'
 import styles from './Footer.module.css'
 
 export function Footer() {
-  const time = useClock()
-
   return (
     <footer className={styles.footer}>
       <div className={styles.wrap}>
@@ -37,7 +34,6 @@ export function Footer() {
         </div>
 
         <div className={styles.bar}>
-          <span>{time}</span>
           <span>{footer.rights}</span>
           <a href="#overview">{footer.backTop}</a>
         </div>

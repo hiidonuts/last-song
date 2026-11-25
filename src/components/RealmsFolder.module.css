@@ -93,23 +93,6 @@
   padding: 2rem 1rem 1rem;
 }
 
-.meta {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  font-family: var(--font-label);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.dot {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 999px;
-  background: currentColor;
-}
-
 .title {
   margin: 0;
   font-family: var(--font-body);

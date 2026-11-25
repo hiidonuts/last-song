@@ -33,7 +33,6 @@ export const realmsIntro = {
 export type Realm = {
   id: string
   tab: string
-  chapter: string
   title: string
   body: string
   tags: [string, string]
@@ -47,8 +46,7 @@ export const realms: Realm[] = [
   {
     id: 'world-01',
     tab: 'World 01',
-    chapter: 'Chapter I',
-    title: 'Ruined sanctuaries',
+    title: 'Sanctuary',
     body: 'Ancient stone shrines hidden deep beneath forgotten cavernous crypts.',
     tags: ['Dark ruins', 'Environment'],
     panel: 'preview',
@@ -59,8 +57,7 @@ export const realms: Realm[] = [
   {
     id: 'world-02',
     tab: 'World 02',
-    chapter: 'Chapter II',
-    title: 'Sunken deserts',
+    title: 'Realm I - The Whisper',
     body: 'Traverse glowing dusk dunes littered with forgotten relics of lost ages.',
     tags: ['Desert dunes', 'Exploration'],
     panel: 'preview',
@@ -71,8 +68,7 @@ export const realms: Realm[] = [
   {
     id: 'world-03',
     tab: 'World 03',
-    chapter: 'Bestiary',
-    title: 'Silent beasts',
+    title: 'Realm II - The Echo',
     body: 'Confront monstrous entities lurking within dark corridors.',
     tags: ['Monsters', 'Combat'],
     panel: 'preview',
@@ -83,8 +79,7 @@ export const realms: Realm[] = [
   {
     id: 'world-04',
     tab: 'World 04',
-    chapter: 'Inventory',
-    title: 'Ancient relics',
+    title: 'Realm III - The Hollow',
     body: 'Discover powerful magical items and ancient gear to survive the darkness.',
     tags: ['Loot', 'Mechanics'],
     panel: 'inventory',
